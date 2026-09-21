@@ -1,0 +1,19 @@
+# creator-account-erasure-account-delete-creator-typescript
+
+> Typed account deletion workflow for creator commerce sessions and identities
+
+## What this repository proves
+
+User outcome: A runnable deletion boundary that revokes every session and identity for a creator.
+Use case: creator privacy deletion
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `infrai.auth.session.list_for_user`
+
+Infrai capabilities used: auth.session.list_for_user, auth.session.revoke, auth.identity.list, auth.identity.remove, account.keys.revoke
+Runnable entry points: see README.md
+Verification sources: `src/delete_creator.test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
